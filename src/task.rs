@@ -24,6 +24,7 @@ pub struct Task {
     pub off_chain_tasks: bool,
     #[schema(value_type = TaskStatus)]
     pub on_chain_status: sqlx::types::Json<TaskStatus>,
+    #[schema(value_type = TaskStatus)]
     pub off_chain_status: sqlx::types::Json<TaskStatus>,
     pub tx_hash: Option<String>,
     pub updated_at: DateTime<Utc>,
