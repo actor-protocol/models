@@ -16,6 +16,7 @@ pub struct Task {
     #[sqlx(try_from = "i32")]
     pub scenario_id: u16,
     #[sqlx(try_from = "Option<i64>")]
+    #[schema(value_type = Option<u32>)]
     pub actor_id: NullableU32,
     #[sqlx(try_from = "i32")]
     pub script_idx: u16,
